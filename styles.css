@@ -1,3 +1,19 @@
+/* Global Font Styles */
+body, h1, h2, h3, h4, h5, h6, p, a, li, div {
+    font-family: 'YourChosenFont', sans-serif; /* Replace 'YourChosenFont' with your desired font */
+    color: #ffffff; /* Change the color to something that complements your design */
+}
+
+/* Additional styling for specific sections if needed */
+header, footer, .hero-section, .contact-section, .about-section, .read-documents-section {
+    font-family: 'YourChosenFont', sans-serif; /* Ensures font is consistent across key sections */
+}
+
+/* Example: Customizing font for headers specifically */
+h1, h2, h3 {
+    font-family: 'YourChosenFont-Bold', sans-serif; /* Bold or different variation for headers */
+}
+
 *body {
     margin: 0;
     font-family: Arial, sans-serif;

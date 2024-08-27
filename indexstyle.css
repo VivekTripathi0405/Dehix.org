@@ -1,3 +1,20 @@
+/* Global Font Styles */
+body, h1, h2, h3, h4, h5, h6, p, a, li, div {
+    font-family: 'Libre Franklin', sans-serif; /* Replace 'YourChosenFont' with your desired font */
+    color: #ffffff; /* Change the color to something that complements your design */
+}
+
+/* Additional styling for specific sections if needed */
+header, footer, .why-join, .how-to-hire, .why-choose-us-section, .roadmap-section, .faq-section, .get-in-touch-section,  .hero-section, .contact-section, .about-section, .read-documents-section {
+    font-family: 'Libre Franklin', sans-serif; /* Ensures font is consistent across key sections */
+}
+
+/* Example: Customizing font for headers specifically */
+h1, h2, h3 {
+    font-family: 'YourChosenFont-Bold', sans-serif; /* Bold or different variation for headers */
+}
+
+
 /* General Styles */
 body {
     margin: 0;
@@ -83,6 +100,121 @@ nav ul li a:hover {
     background-color: #CCCCCC;
     color: #0C0A19;
 }
+/* Responsive Header and Hamburger Menu */
+
+/* Default styling for larger screens */
+@media (max-width: 992px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .cta-buttons button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger-menu div {
+        width: 25px;
+        height: 3px;
+        background-color: #CCCCCC;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    .menu-active .bar1 {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+
+    .menu-active .bar2 {
+        opacity: 0;
+    }
+
+    .menu-active .bar3 {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+
+    .hamburger-menu.open + nav {
+        display: flex;
+        flex-direction: column;
+        background-color: #1B172D;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        color: #CCCCCC;
+        padding: 10px 0;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .cta-buttons button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .logo img {
+        width: 120px;
+        height: 50px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .cta-buttons button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+
+
 
 /* Hero Section */
 .hero {
@@ -167,26 +299,68 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
         text-align: center;
         padding: 50px 20px;
+        background-color: #010314;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('wave-background.png') no-repeat center center/cover;
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 0 20px;
+        z-index: 1;
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        color: #FFF5FF;
     }
 
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: #F2F2F2;
+    }
+
+    .hero .btn-primary {
+        font-size: 1rem;
+        padding: 12px 25px;
+        margin-bottom: 20px;
+        background-color: #000000;
+        border-radius: 50px;
+        color: #ffffff;
+        text-decoration: none;
     }
 
     .hero-image {
-        margin-top: 30px;
+        width: 100%;
+        margin-top: 20px;
+        z-index: 1;
+    }
+
+    .hero-image img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 }
+
 
 
 /* Why Join Section */
@@ -314,7 +488,13 @@ nav ul li a:hover {
     }
 }
 
-/* Why Choose Us Section */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #010314;
+    color: white;
+}
+
 .why-choose-us-section {
     padding: 50px 0;
     text-align: center;
@@ -367,6 +547,78 @@ nav ul li a:hover {
     color: #C1C1FF;
 }
 
+/* Responsive CSS */
+
+/* Tablets and smaller screens */
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+
+    .feature-box {
+        max-width: 45%; /* Adjusted to fit two boxes side by side on medium screens */
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    .section-description {
+        font-size: 1.1em;
+    }
+
+    .feature-box {
+        max-width: 100%; /* Full-width on smaller screens */
+        margin-bottom: 20px;
+        padding: 15px; /* Adjust padding for better spacing on small screens */
+    }
+
+    .feature-title {
+        font-size: 1.3em;
+    }
+
+    .feature-description {
+        font-size: 0.9em;
+    }
+}
+
+/* Smaller Mobile Devices */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .section-description {
+        font-size: 1em;
+    }
+
+    .feature-title {
+        font-size: 1.2em;
+    }
+
+    .feature-description {
+        font-size: 0.9em;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1B172D;
+    color: #CCCCCC;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
 /* Our Roadmap Section */
 .roadmap-section {
     padding: 50px 0;
@@ -403,7 +655,7 @@ nav ul li a:hover {
     position: absolute;
     width: 25px;
     height: 25px;
-    right: -12.5px;
+    right: 27.5px;
     background-color: white;
     border: 4px solid #E275FF;
     top: 30px;
@@ -443,6 +695,105 @@ nav ul li a:hover {
     font-size: 1em;
     color: #C1C1FF;
 }
+/* Responsive CSS */
+
+/* Tablets and smaller screens */
+@media (max-width: 992px) {
+    .timeline-item {
+        padding: 15px 30px;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+    .timeline-date {
+        font-size: 1.1em;
+    }
+
+    .timeline-description {
+        font-size: 0.95em;
+    }
+
+    .timeline-item::after {
+        width: 20px;
+        height: 20px;
+        right: -10px;
+        top: 25px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .timeline {
+        margin: 0 auto;
+    }
+
+    .timeline::after {
+        left: 30px; /* Position the line on the left side of the screen */
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item::after {
+        left: 15px; /* Adjust the dot to be near the line */
+        right: auto;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+    .timeline-title {
+        font-size: 1.3em;
+    }
+
+    .timeline-date {
+        font-size: 1em;
+    }
+
+    .timeline-description {
+        font-size: 0.9em;
+    }
+}
+
+/* Smaller Mobile Devices */
+@media (max-width: 480px) {
+    .timeline-item {
+        padding-left: 60px;
+        padding-right: 20px;
+    }
+
+    .timeline-item::after {
+        left: 15px;
+        top: 25px;
+    }
+
+    .timeline-content {
+        padding: 10px;
+    }
+
+    .timeline-title {
+        font-size: 1.2em;
+    }
+
+    .timeline-date {
+        font-size: 0.95em;
+    }
+
+    .timeline-description {
+        font-size: 0.85em;
+    }
+}
+
 
 /* Faq */
 .faq-section {
@@ -514,6 +865,76 @@ nav ul li a:hover {
 .faq-button:hover {
     background-color: #C1C1FF;
 }
+/* Responsive CSS */
+
+/* Tablets and Smaller Screens */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    .faq-question {
+        font-size: 1.1em;
+    }
+
+    .faq-answer {
+        font-size: 1em;
+    }
+
+    .faq-button {
+        font-size: 1.1em;
+        padding: 10px 18px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .faq-item {
+        padding: 15px;
+    }
+
+    .faq-question {
+        font-size: 1em;
+    }
+
+    .faq-answer {
+        font-size: 0.9em;
+    }
+
+    .faq-button {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+}
+
+/* Smaller Mobile Devices */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .faq-item {
+        padding: 10px;
+    }
+
+    .faq-question {
+        font-size: 0.95em;
+    }
+
+    .faq-answer {
+        font-size: 0.85em;
+    }
+
+    .faq-button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+}
+
 
 /* Get in Touch*/
 body {
@@ -610,21 +1031,90 @@ textarea {
     border-radius: 10px;
 }
 
-@media (min-width: 768px) {
-    .content-wrapper {
-        flex-direction: row;
+/* Responsive CSS */
+
+/* Tablets and Smaller Screens */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    .form-content,
+    .image-content {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .submit-btn {
+        font-size: 1.1em;
+        padding: 12px 25px;
     }
 }
 
-@media (max-width: 767px) {
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .get-in-touch-section {
+        padding: 30px 10px;
+    }
+
     .content-wrapper {
         flex-direction: column;
+        padding: 10px;
     }
-    .image-content {
-        order: -1;
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .form-content {
         margin-bottom: 20px;
     }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .submit-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .image-content {
+        margin-top: 20px;
+    }
 }
+
+/* Smaller Mobile Devices */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .form-content {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .submit-btn {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .image-content img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
 
 /* Footer */
 .footer {

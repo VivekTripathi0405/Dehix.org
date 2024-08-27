@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dehix - Decentralized Hiring Platform</title>
     <link rel="stylesheet" href="indexstyle.css" />
-  </head>
+    <script src="index.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=YourChosenFont:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   <body>
     <header>
       <div class="logo">
@@ -21,6 +25,11 @@
           <li><a href="#alpha">Alpha</a></li>
         </ul>
       </nav>
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div class="bar1"><a href="index.html"></a></div>
+        <div class="bar2"><a href="about.html"></a></div>
+        <div class="bar3"></div>
+    </div>
       <div class="cta-buttons">
         <button class="login-btn">Login</button>
         <button class="register-btn">Register</button>
@@ -28,28 +37,43 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Empower Your Freelance Journey</h1>
-                <p>Join Dehix and connect with top-tier freelancers. Experience a decentralized platform designed to elevate your projects.</p>
-                <a href="#" class="btn-primary">Get Started</a>
-            </div>
-            <div class="hero-image">
-                <img src="img/roket.png" alt="Empowering Freelancers">
-            </div>
-        </section>
-        
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Empower Your Freelance Journey</h1>
+          <p>
+            Join Dehix and connect with top-tier freelancers. Experience a
+            decentralized platform designed to elevate your projects.
+          </p>
+          <a href="#" class="btn-primary">Get Started</a>
+        </div>
+        <div class="hero-image">
+          <img src="img/roket.png" alt="Empowering Freelancers" />
+        </div>
+      </section>
 
       <section class="why-join">
         <div class="why-join-text">
-            <h2>Why Joining Dehix is worth using today?</h2>
-            <p>Joining Dehix is worth considering today because it leverages advanced blockchain technology to address key issues in the freelance market, such as unverified profiles, lack of payment transparency, high fees, and fake reviews. The platform ensures secure and transparent transactions through the use of oracles and smart contracts, which verify real-world data and automate payments. Dehix also offers features like Non-Fungible Wisdom Tokens (NFWTs) for certification storage, the Stake for Truth (SFT) protocol for data integrity, and a Decentralized Autonomous Organization (DAO) for project funding and governance. These innovations create a more transparent, fair, and supportive environment for freelancers and clients, making Dehix a compelling choice in the evolving digital work landscape.</p>
+          <h2>Why Joining Dehix is worth using today?</h2>
+          <p>
+            Joining Dehix is worth considering today because it leverages
+            advanced blockchain technology to address key issues in the
+            freelance market, such as unverified profiles, lack of payment
+            transparency, high fees, and fake reviews. The platform ensures
+            secure and transparent transactions through the use of oracles and
+            smart contracts, which verify real-world data and automate payments.
+            Dehix also offers features like Non-Fungible Wisdom Tokens (NFWTs)
+            for certification storage, the Stake for Truth (SFT) protocol for
+            data integrity, and a Decentralized Autonomous Organization (DAO)
+            for project funding and governance. These innovations create a more
+            transparent, fair, and supportive environment for freelancers and
+            clients, making Dehix a compelling choice in the evolving digital
+            work landscape.
+          </p>
         </div>
         <div class="why-join-image">
-            <img src="img/why-img.png" alt="Bitcoin">
+          <img src="img/why-img.png" alt="Bitcoin" />
         </div>
-    </section>
-    
+      </section>
 
       <section class="how-to-hire">
         <h2>How to Hire on Dehix</h2>
@@ -97,21 +121,31 @@
               <h2 class="feature-title">Security</h2>
               <p class="feature-description">
                 Our platform uses smart contracts integrated with blockchain
-                oracles. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam omnis consequuntur quidem doloribus vero deserunt illo aspernatur illum explicabo sapiente ad, porro animi aliquid nobis, eveniet nam temporibus cum eos.
+                oracles. Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Numquam omnis consequuntur quidem doloribus vero deserunt
+                illo aspernatur illum explicabo sapiente ad, porro animi aliquid
+                nobis, eveniet nam temporibus cum eos.
               </p>
             </div>
             <div class="feature-box">
               <h2 class="feature-title">Efficient Transaction</h2>
               <p class="feature-description">
                 They automatically execute transactions when predefined
-                conditions are met. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam perferendis harum, ducimus qui id quidem facilis ad doloremque eaque laborum odit aliquam! Rem porro ipsa ut beatae veritatis doloribus suscipit?
+                conditions are met. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quisquam perferendis harum, ducimus qui id
+                quidem facilis ad doloremque eaque laborum odit aliquam! Rem
+                porro ipsa ut beatae veritatis doloribus suscipit?
               </p>
             </div>
             <div class="feature-box">
               <h2 class="feature-title">Transparency</h2>
               <p class="feature-description">
                 Payments using our token, allowing for fast, secure, and
-                transparent transactions. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam doloremque voluptates eum et eos asperiores. Facere assumenda, omnis velit autem eius quas tenetur excepturi quibusdam voluptatibus quia doloremque iure placeat.
+                transparent transactions. Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Veniam doloremque voluptates eum
+                et eos asperiores. Facere assumenda, omnis velit autem eius quas
+                tenetur excepturi quibusdam voluptatibus quia doloremque iure
+                placeat.
               </p>
             </div>
           </div>
@@ -160,125 +194,176 @@
       <!-- FAQ Section -->
       <section class="faq-section">
         <div class="container">
-            <h1 class="section-title">Answer to the Most Frequently Asked Questions</h1>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(1)">1. How does Dehix ensure quality of freelancers?</button>
-                    <div class="faq-answer" id="faq1">
-                        <p>Dehix ensures the quality of freelancers through a rigorous vetting process, including portfolio reviews, skill assessments, and client feedback. Our blockchain technology adds an extra layer of verification and trust.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(2)">2. How are payments handled on Dehix?</button>
-                    <div class="faq-answer" id="faq2">
-                        <p>Payments are managed through our secure, blockchain-based platform. Funds are held in escrow and only released when project milestones are met, ensuring fairness for both parties.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(3)">3. What happens if there's a dispute between an employer and a freelancer?</button>
-                    <div class="faq-answer" id="faq3">
-                        <p>In case of a dispute, our support team will mediate, and the blockchain record of all transactions and agreements will help ensure a fair resolution.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(4)">4. How can I get started as a freelancer on Dehix?</button>
-                    <div class="faq-answer" id="faq4">
-                        <p>Sign up on Dehix, complete your profile with verified credentials, and start bidding on projects. Our platform guides you through the onboarding process to ensure a smooth start.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(5)">5. What types of projects can I find on Dehix?</button>
-                    <div class="faq-answer" id="faq5">
-                        <p>Dehix offers a wide range of projects across various industries, including tech, design, writing, and more. Whether you're a beginner or an expert, there's something for everyone.</p>
-                    </div>
-                </div>
+          <h1 class="section-title">
+            Frequently Asked Questions
+          </h1>
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(1)">
+                1. How does Dehix ensure quality of freelancers?
+              </button>
+              <div class="faq-answer" id="faq1">
+                <p>
+                  Dehix ensures the quality of freelancers through a rigorous
+                  vetting process, including portfolio reviews, skill
+                  assessments, and client feedback. Our blockchain technology
+                  adds an extra layer of verification and trust.
+                </p>
+              </div>
             </div>
-            <button class="faq-button">Shoot Your Question</button>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(2)">
+                2. How are payments handled on Dehix?
+              </button>
+              <div class="faq-answer" id="faq2">
+                <p>
+                  Payments are managed through our secure, blockchain-based
+                  platform. Funds are held in escrow and only released when
+                  project milestones are met, ensuring fairness for both
+                  parties.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(3)">
+                3. What happens if there's a dispute between an employer and a
+                freelancer?
+              </button>
+              <div class="faq-answer" id="faq3">
+                <p>
+                  In case of a dispute, our support team will mediate, and the
+                  blockchain record of all transactions and agreements will help
+                  ensure a fair resolution.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(4)">
+                4. How can I get started as a freelancer on Dehix?
+              </button>
+              <div class="faq-answer" id="faq4">
+                <p>
+                  Sign up on Dehix, complete your profile with verified
+                  credentials, and start bidding on projects. Our platform
+                  guides you through the onboarding process to ensure a smooth
+                  start.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFAQ(5)">
+                5. What types of projects can I find on Dehix?
+              </button>
+              <div class="faq-answer" id="faq5">
+                <p>
+                  Dehix offers a wide range of projects across various
+                  industries, including tech, design, writing, and more. Whether
+                  you're a beginner or an expert, there's something for
+                  everyone.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="faq-button">Shoot Your Question</button>
         </div>
-    </section>
-    <section class="get-in-touch-section">
+      </section>
+      <section class="get-in-touch-section">
         <div class="content-wrapper">
-            <div class="form-content">
-                <h1 class="section-title">Get In Touch Now</h1>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your message (optional)"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="submit-btn">Submit</button>
-                    </div>
-                </form>
-            </div>
-            <div class="image-content">
-                <img src="img/30533.jpg" alt="Get In Touch Image">
-            </div>
+          <div class="form-content">
+            <h1 class="section-title">Get In Touch Now</h1>
+            <form action="#" method="post">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your message (optional)"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="submit-btn">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="image-content">
+            <img src="img/30533.jpg" alt="Get In Touch Image" />
+          </div>
         </div>
-    </section>
-
-    <script>
-        function toggleFAQ(id) {
-            const answer = document.getElementById(`faq${id}`);
-            answer.style.display = answer.style.display === "block" ? "none" : "block";
-        }
-    </script>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h2 class="footer-heading">Decentralization Hiring Talent</h2>
-            </div>
-            <div class="footer-section">
-                <h3 class="footer-title">Useful Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Terms & Services</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3 class="footer-title">Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
-                    <a href="#"><img src="img\instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
-                    <a href="#"><img src="img/whatsapp.png" alt="WhatsApp"></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3 class="footer-title">Get in Touch</h3>
-                <ul class="footer-links">
-                    <li><a href="https://www.dehix.org">www.dehix.org</a></li>
-                    <li><a href="mailto:info@dehix.org">info@dehix.org</a></li>
-                </ul>
-            </div>
-            <div class="footer-section subscribe">
-                <h3 class="footer-title">Subscribe Newsletter</h3>
-                <form class="subscribe-form">
-                    <input type="email" placeholder="Info@dehix.org" required>
-                    <button type="submit"><img src="img/send.png" alt="Send"></button>
-                </form>
-            </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h2 class="footer-heading">Decentralization Hiring Talent</h2>
         </div>
-        <div class="footer-bottom">
-            <p>Copyright © Dehix@org | All rights reserved.</p>
+        <div class="footer-section">
+          <h3 class="footer-title">Useful Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms & Services</a></li>
+          </ul>
         </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><img src="img/linkedin.png" alt="LinkedIn" /></a>
+            <a href="#"><img src="img\instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter" /></a>
+            <a href="#"><img src="img/whatsapp.png" alt="WhatsApp" /></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Get in Touch</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.dehix.org">www.dehix.org</a></li>
+            <li><a href="mailto:info@dehix.org">info@dehix.org</a></li>
+          </ul>
+        </div>
+        <div class="footer-section subscribe">
+          <h3 class="footer-title">Subscribe Newsletter</h3>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Info@dehix.org" required />
+            <button type="submit"><img src="img/send.png" alt="Send" /></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright © Dehix@org | All rights reserved.</p>
+      </div>
     </footer>
-    
   </body>
 </html>
